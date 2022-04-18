@@ -1,0 +1,51 @@
+Задание 1.
+
+#include <iostream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <sstream>
+#include <windows.h>
+#include <fstream>
+
+using namespace std;
+int main()
+{
+    char Str;
+    SetConsoleOutputCP(CP_UTF8);
+    cout << "Введите вещественное число:\n";
+    cin >> Str;
+    double d;
+    d = stod(Str);
+    cout << d << endl;
+    return 0;
+}
+
+Задание 2.
+
+#include <iostream>
+#include <vector>
+#include <windows.h>
+using namespace std;
+
+int main () {
+    SetConsoleOutputCP(CP_UTF8);
+    vector<char> result;
+    vector<char>::iterator el;
+    string::iterator it;
+
+    string str;
+    cout << "Введите строку:\n";
+    cin >> str;
+
+    for (it = str.begin(); it!=str.end(); ++it)
+    {
+        result.push_back(*it);
+    }
+
+    for (el = result.begin(); el !=result.end(); ++el)
+    {
+        cout<<*el<<endl;
+    }
+    return 0;
+
+}
